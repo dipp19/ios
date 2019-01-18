@@ -1539,7 +1539,7 @@
 			files = files.map(function(file) {
 				// FIXME super kludge - remove it
 				// console.assert(file !== '')
-				if( file === 'patt.pp' || file === 'patt.kanji' || file === 'patt2.pp' || file === 'patt2.kanji' ){
+				if( file === 'patt.hiro' || file === 'patt.kanji' || file === 'patt2.hiro' || file === 'patt2.kanji' ){
 					// debugger
 					return ['http://127.0.0.1:8080/data/data/' + file, file]
 				}
