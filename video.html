@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-	<title>Run 3.9</title>
+	<title>Run 4.0</title>
 	<!-- include three.js library -->
 	<script src='js/three.js'></script>
 	<!-- include jsartookit -->
@@ -16,7 +16,9 @@
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 
-<video id="video" width="220" height="140" controls loop crossorigin="anonymous" playsinline>
+<button onclick="disableMute()" type="button">Enable sound</button>
+	
+<video id="video" width="220" height="140" loop autoplay crossorigin="anonymous" playsinline style="display:none">
       <source src="https://cdn.glitch.com/b2f04b70-59b4-4ad2-8993-5cd7c75350c9%2FLagu%20PP2%20(Low%20Quality).mp4?1548052912980">
 </video>
 
@@ -134,6 +136,12 @@ function animate()
 	update();
 	render();
 }
+	
+function disableMute() {
+  var vmute = document.getElementById("myAudio");
+  vmute.muted = false
+}
+	
 </script>
 		
 		
