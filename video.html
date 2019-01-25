@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-	<title>Run 8.5 iOS</title>
+	<title>Run 8.6 iOS Touch</title>
 	<!-- include three.js library -->
 	<script src='js/three.js'></script>
 	<!-- include jsartookit -->
@@ -13,41 +13,17 @@
 	<script src="threex/threex-arbasecontrols.js"></script>
 	<script src="threex/threex-armarkercontrols.js"></script>
 	
-<!-- <style>  
-.button{
-  background-color: Transparent;
-  border: none;
-  color: aqua;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  outline:none;
-}
-</style> -->
-	
 </head>
 
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'>
 
-<!-- <button class="button" onclick="disableMute()" type="button">Play</button> -->
-<input type="image" src="https://cdn.glitch.com/834c45b7-1662-4b81-afe7-216fb6d7c2ec%2FPicture1.png?1548435995186" width="48" height="48" onclick="disableMute()">
-	
 <video id="video" loop autoplay muted crossorigin="anonymous" playsinline style="display:none">
       <source src="https://cdn.glitch.com/b2f04b70-59b4-4ad2-8993-5cd7c75350c9%2FLagu%20PP2%20(Low%20Quality).mp4?1548052912980">
       <source src="https://cdn.glitch.com/31e540cb-4070-4eb8-9d34-40e5ed0857f2%2FLaguPP2LowQuality%20(android).mp4?1548399292645">
 </video>
 
-<!-- 
-  Example created by Lee Stemkoski: https://github.com/stemkoski
-  Based on the AR.js library and examples created by Jerome Etienne: https://github.com/jeromeetienne/AR.js/
 
-<body style='margin : 0px; overflow: hidden; font-family: Monospace;'> -->
 	
-		
 <script>
 var scene, camera, renderer, clock, deltaTime, totalTime;
 var arToolkitSource, arToolkitContext;
@@ -155,11 +131,12 @@ function animate()
 	render();
 }
 	
-function disableMute() {
-  var vmute = document.getElementById("video");
-  vmute.muted = false
-}
-	
+window.addEventListener('touchstart',
+      function disableMute(){
+      var vmute = document.getElementById("video");
+      vmute.muted = false;
+      }, false);
+
 </script>
 		
 		
